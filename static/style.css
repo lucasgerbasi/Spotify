@@ -1,0 +1,116 @@
+/* Dark Theme Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff; /* Light text color */
+    margin-left: 10px;
+}
+
+.artist_info {
+    margin-left: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    margin-left: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #fff; /* Light text color */
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #444; /* Dark input background */
+    color: #fff; /* Light text color */
+    border: none;
+}
+
+button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: #17a048;
+}
+
+/* Results Section */
+
+h2 {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #444; /* Dark background for list items */
+    border: 1px solid #333; /* Dark border color */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Artist Image */
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 10px;
+    display: block;
+    margin-left: 10px;
+}
+
+/* Top Artists and Top Tracks Lists */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: #444; /* Dark background for list items */
+    border: 1px solid #333; /* Dark border color */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 600px) {
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+}

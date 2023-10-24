@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Artist Information</h1>
+
+    <form method="POST">
+        <label for="artist_name">Enter an artist's name:</label>
+        <input type="text" id="artist_name" name="artist_name" placeholder="Artist Name">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if artist_info %}
+        <h2>{{ artist_info.name }}</h2>
+        <p class="artist_info">Genres: {{ artist_info.genres }}</p>
+        <p class="artist_info">Popularity: {{ artist_info.popularity }}</p>
+        <img src="{{ artist_info.image }}" alt="Artist Image" style="width: 200px; height: 200px" class="artist_info">
+    {% endif %}
+
+    <h2>Your Top Tracks</h2>
+    <ul>
+        {% for track in top_tracks %}
+            <li>{{ track.name }} by {{ track.artist_names }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Your Top Artists</h2>
+    <ul>
+        {% for artist in top_artists %}
+            <li>{{ artist.name }} ({{ artist.genres | default('No genres listed') }})
+        {% endfor %}
+    </ul>
+</body>
+</html>
